@@ -1,17 +1,14 @@
-public class Elev extends skolperson {
+public class elev extends skolperson {
     private int årskurs;
     private String inriktning;
 
-    public Elev(String namn, int årskurs) {
+    public elev(String namn, int årskurs, String inriktning) {
         super(namn);
-        if (årskurs < 1) {
+        this.inriktning = inriktning;
+        if (årskurs < 1 || årskurs > 3) {
             throw new IllegalArgumentException("Ogilltig årskurs");
         }
         this.årskurs = årskurs;
-    }
-
-    public void setInriktning(){
-        //Gör så man väljer inriktning
     }
 
     public String getInriktning(){
